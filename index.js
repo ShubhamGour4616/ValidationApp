@@ -14,7 +14,7 @@ app.use(cors())
 
 // creating database
 
-mongoose.connect(`${DATABASE_URL}/validatonDB`, {
+mongoose.connect("mongodb://localhost:27017/validatonDB", {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
