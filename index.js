@@ -4,7 +4,7 @@ import mongoose, { Mongoose } from "mongoose"
 import dotenv from 'dotenv'
 dotenv.config()
 
-const DATABASE_URL =process.env.DATABASE_URL
+const DATABASE_URL ="mongodb+srv://shubhamgour:5iWcQbLTf2VS63ay@cluster0.wd31auu.mongodb.net/validatonDB?retryWrites=true&w=majority"
 
 
 const app = express()
@@ -14,7 +14,7 @@ app.use(cors())
 
 // creating database
 
-mongoose.connect("mongodb://localhost:27017/validatonDB", {
+mongoose.connect(DATABASE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
